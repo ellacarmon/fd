@@ -32,7 +32,7 @@ fi
 
 echo "source folder is ${SOURCE_FOLDER}"
 echo "adding fav alias"
-ALIAS='alias fav=".'${PATH_TO_INSTALL}'/fav_dir.sh"'
+ALIAS='alias fav="'${PATH_TO_INSTALL}'fav_dir.sh"'
 
 echo ${ALIAS} >> ${SOURCE_FOLDER}
 source ${SOURCE_FOLDER}
