@@ -23,6 +23,10 @@ echo "Cloning script to ${PATH_TO_INSTALL}"
 cd ${PATH_TO_INSTALL}
 git clone https://github.com/ellacarmon/fd.git
 cd fd
+OLD_CONF='CONF=config.conf'
+NEW_CONF="CONF=${PATH_TO_INSTALL}config.conf"
+echo ${NEW_CONF}
+sed "s~$OLD_CONF~$NEW_CONF~" fav_dir.sh
 cp fav_dir.sh ${PATH_TO_INSTALL}
 SOURCE_FOLDER=~/.zshrc
 if [[ -n $2 ]]
